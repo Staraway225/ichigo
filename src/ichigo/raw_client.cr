@@ -13,8 +13,8 @@ class Ichigo::RawClient
   def search(
     url : String? = nil,
     file : File? | String? | Path? | IO? = nil,
-    mask : Int64? = nil,
-    exclude_mask : Int64? = nil,
+    mask : Int64? | String? = nil,
+    exclude_mask : Int64? | String? = nil,
     site : Int32 = 999,
     testmode : Bool = false,
     result_count : Int32 = 16
