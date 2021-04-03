@@ -1,10 +1,10 @@
 name: ichigo
-version: 0.1.0
+version: 0.1.1
 
 authors:
   - Staraway225 <starawayy@protonmail.com>
 
-crystal: 0.36.1
+crystal: 1.0.0
 
 license: ISC
 
@@ -12,7 +12,7 @@ development_dependencies:
   ameba:
     github: crystal-ameba/ameba
     version: ~> 0.13.0
-  
+
   webmock:
     github: manastech/webmock.cr
     branch: master
