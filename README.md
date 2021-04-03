@@ -5,13 +5,12 @@ Simple and lightweight SauceNAO API wrapper written in Crystal.
 ## Installation
 
 1. Add the dependency to your `shard.yml`:
-   
+
    ```yaml
    dependencies:
      ichigo:
        github: Staraway225/ichigo
-       version: 0.1.0
-   
+       version: 0.1.1
    ```
 
 2. Run `shards install`
@@ -25,57 +24,57 @@ require "ichigo"
 ### Examples
 
 1. Search by an image url:
-   
+
    ```crystal
    client = Ichigo::Client.new "your_saucenao_api_key_here"
    response = client.search "https://example.com/image.png"
-   
+
    pp response
    ```
 
 2. Search by a local image:
-   
+
    - by an image path as `String`:
-     
+
      ```crystal
      image = "/path/to/image.png"
-     
+
      client = Ichigo::Client.new "your_saucenao_api_key_here"
      response = client.search(file: image)
-     
+
      pp response
      ```
-   
+
    - by an image path as `Path` object:
-     
+
      ```crystal
      image = Path["/path/to/image.png"]
-     
+
      client = Ichigo::Client.new "your_saucenao_api_key_here"
      response = client.search(file: image)
-     
+
      pp response
      ```
-   
+
    - by an image as `File` object:
-     
+
      ```crystal
      image = File.new("/path/to/image.png")
-     
+
      client = Ichigo::Client.new "your_saucenao_api_key_here"
      response = client.search(file: image)
-     
+
      pp response
      ```
-   
+
    - by an image as `IO` object:
-     
+
      ```crystal
      image = IO::Memory.new File.read("/path/to/image.png")
-     
+
      client = Ichigo::Client.new "your_saucenao_api_key_here"
      response = client.search(file: image)
-     
+
      pp response
      ```
 
